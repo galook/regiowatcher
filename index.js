@@ -58,7 +58,7 @@ const Mailjet = require( 'node-mailjet')
 
 
 const main = async () => {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://regiojet.cz/?departureDate=2022-08-10&tariffs=REGULAR&fromLocationId=10202031&fromLocationType=CITY&toLocationId=10202003&toLocationType=CITY');
     await page.waitForNetworkIdle()
